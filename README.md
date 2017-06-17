@@ -17,6 +17,21 @@ About
 Feature request for a `NSPair` object in Apple's `Foundation` framework:  
 http://openradar.appspot.com/radar?id=5050086249725952
 
+Proposed interface:
+
+    NS_ASSUME_NONNULL_BEGIN
+    
+    @interface NSPair< __covariant FirstType, __covariant SecondType >: NSObject < NSCoding, NSCopying >
+    
+    @property( atomic, readwrite, strong, nullable ) FirstType  first;
+    @property( atomic, readwrite, strong, nullable ) SecondType second;
+    
+    - ( instancetype )initWithFirstValue: ( nullable FirstType )first secondValue: ( nullable SecondType )second NS_DESIGNATED_INITIALIZER;
+    
+    @end
+    
+    NS_ASSUME_NONNULL_END
+
 License
 -------
 
