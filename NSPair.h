@@ -31,7 +31,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSPair< __covariant FirstType, __covariant SecondType >: NSObject < NSCoding, NSCopying >
+@interface NSPair< FirstType, SecondType >: NSObject < NSCoding, NSCopying >
 
 @property( atomic, readwrite, strong, nullable ) FirstType  first;
 @property( atomic, readwrite, strong, nullable ) SecondType second;
